@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-zinc-950 font-sans text-white antialiased;
+  }
+
+  ::selection {
+    @apply bg-white/25 text-white;
+  }
+}
+
+@layer utilities {
+  .page-shell {
+    animation: page-enter 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .page-shell > header {
+    animation: header-enter 800ms 80ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .page-shell img[aria-hidden='true'] {
+    animation: background-enter 1.4s ease-out both;
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes header-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes background-enter {
+  from {
+    opacity: 0;
+    transform: scale(1.16);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-shell,
+  .page-shell > header,
+  .page-shell img[aria-hidden='true'] {
+    animation: none;
+  }
+}

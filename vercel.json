@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    { "source": "/projects/", "destination": "/projects", "permanent": true },
+    { "source": "/members/", "destination": "/members", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
