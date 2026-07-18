@@ -1,19 +1,14 @@
-# Haru Team Landing Page
+# Haru Team
 
-A small but mighty landing page for the Haru Team. It introduces the crew,
-shows off current projects, and makes it easy to say hello. Expect bold
-visuals, friendly motion, and a light/dark theme switcher that keeps things
-neat and readable.
+The official Haru Team entry point for projects and members. It is a fast, responsive React landing page with a blurred local background, subtle entrance animations, and dedicated project and member profile routes.
 
-## What's inside
-- Hero section with a featured team card.
-- About, Members, Project, and Contact sections.
-- Built with plain HTML, CSS, and JavaScript.
+## Tech stack
 
-## Run locally
-Open `index.html` in a browser and you're set.
-
-
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- Inline SVG favicon/logo
 
 ### P.S.
-The location in the contact section wasn't real btw; it was merely a placeholder. Lol.
+
+It's super duper cool for my inspective.

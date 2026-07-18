@@ -33,7 +33,7 @@ export const members: Member[] = [
     slug: 'rek', 
     name: 'Rek', 
     role: 'Member', 
-    bio: 'Most helpfull member in the team', 
+    bio: 'Most helpful member in the team', 
     socials: [{ name: 'Instagram', url: 'https://www.instagram.com/thndon_jj02/' }] 
   },
 ]
