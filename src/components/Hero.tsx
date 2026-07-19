@@ -11,7 +11,7 @@ export function Hero() {
         <div className="w-full max-w-4xl text-center">
           <p className="animate-[pulse_5s_ease-in-out_infinite] text-sm font-medium tracking-[0.2em] text-white/60 uppercase">Haru Team</p>
           <h1 className="mt-6 text-5xl font-semibold tracking-[-0.055em] text-white sm:text-7xl md:text-8xl">Hello from Haru.</h1>
-          <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-white/65 sm:text-lg">A small collective for thoughtful tools, curious experiments, and the moments in between.</p>
+          <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-white/65 sm:text-lg">A small team in the internet.</p>
           <div className="mt-10"><SocialLinks /></div>
         </div>
       </div>
