@@ -148,9 +148,9 @@ function FelzethHome({ onNavigate }: { onNavigate: (p: Page) => void }) {
             <button className="btn ghost small" onClick={() => onNavigate("notes")}>
               <NotebookPen size={14} /> notes
             </button>
-            <a className="social" href="https://github.com/felzeth" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={16} /></a>
-            <a className="social" href="https://x.com/felzeth" target="_blank" rel="noreferrer" aria-label="X / Twitter"><AtSign size={16} /></a>
-            <a className="social" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=felzeth@haru.team" aria-label="Email"><Mail size={16} /></a>
+            <a className="social" href="https://github.com/felzeth" target="_blank" rel="noreferrer" aria-label="GitHub" title="Github"><Github size={16} /></a>
+            <a className="social" href="https://x.com/felzeth" target="_blank" rel="noreferrer" aria-label="X / Twitter" title="X / Twitter"><AtSign size={16} /></a>
+            <a className="social" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=felzeth@haru.team" aria-label="Email" title="Email"><Mail size={16} /></a>
           </div>
         </div>
       </footer>
