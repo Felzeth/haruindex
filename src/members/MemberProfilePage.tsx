@@ -1,9 +1,76 @@
 import countrysideImage from '../assets/images/japan-countryside.jpg'
 import { Footer } from '../components/Footer'
 import type { Member } from './data'
+import FelzethProfile from './felzeth/FelzethProfile'
+
 type Props = { member: Member }
+
 export function MemberProfilePage({ member }: Props) {
-  return <main className="page-shell relative isolate flex min-h-dvh flex-col overflow-hidden"><img alt="" aria-hidden="true" className="absolute inset-[-4%] -z-20 h-[108%] w-[108%] max-w-none scale-110 object-cover object-center blur-md" src={countrysideImage} /><div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-zinc-950/70 to-zinc-950" /><header className="fixed inset-x-0 top-0 z-20 px-4 pt-4 sm:px-6"><nav className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/10 bg-zinc-950/50 px-4 py-3 backdrop-blur-xl sm:px-5"><a className="min-h-10 content-center text-sm font-semibold tracking-tight" href="/">haru<span className="text-white/45">.team</span></a><a className="min-h-10 content-center text-sm text-white/65 hover:text-white" href="/members">Members</a></nav></header><section className="flex flex-1 items-center justify-center px-4 pb-4 pt-24 sm:px-6 sm:pt-28"><div className="w-full max-w-2xl text-center"><a className="text-sm text-white/55 hover:text-white" href="/members">← All members</a><p className="mt-10 text-sm font-medium tracking-[0.2em] text-white/55 uppercase">Haru Team</p><h1 className="mt-5 text-5xl font-semibold tracking-tight text-white sm:text-7xl">{member.name}</h1><p className="mt-4 text-lg text-white/55">{member.role}</p><p className="mx-auto mt-8 max-w-lg text-base leading-7 text-white/70 sm:text-lg">{member.bio}</p><div className="mt-10 flex flex-wrap justify-center gap-3">{member.socials.map((social) => <a className="min-h-10 rounded-full border border-white/15 bg-white/[0.05] px-5 py-2.5 text-sm text-white/75 hover:border-white/30 hover:bg-white/10 hover:text-white" href={social.url} key={social.name} rel="noreferrer" target="_blank">{social.name} ↗</a>)}</div></div></section><Footer /></main>
+  if (member.slug === 'felzeth') {
+    return <FelzethProfile />
+  }
+
+  return (
+    <main className="page-shell relative isolate flex min-h-dvh flex-col overflow-hidden">
+      <img
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-[-4%] -z-20 h-[108%] w-[108%] max-w-none scale-110 object-cover object-center blur-md"
+        src={countrysideImage}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-zinc-950/70 to-zinc-950"
+      />
+
+      <header className="fixed inset-x-0 top-0 z-20 px-4 pt-4 sm:px-6">
+        <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/10 bg-zinc-950/50 px-4 py-3 backdrop-blur-xl sm:px-5">
+          <a className="min-h-10 content-center text-sm font-semibold tracking-tight" href="/">
+            haru<span className="text-white/45">.team</span>
+          </a>
+          <a className="min-h-10 content-center text-sm text-white/65 hover:text-white" href="/members">
+            Members
+          </a>
+        </nav>
+      </header>
+
+      <section className="flex flex-1 items-center justify-center px-4 pb-4 pt-24 sm:px-6 sm:pt-28">
+        <div className="w-full max-w-2xl text-center">
+          <a className="text-sm text-white/55 hover:text-white" href="/members">
+            ← All members
+          </a>
+
+          <p className="mt-10 text-sm font-medium tracking-[0.2em] text-white/55 uppercase">Haru Team</p>
+
+          <h1 className="mt-5 text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+            {member.name}
+          </h1>
+
+          <p className="mt-4 text-lg text-white/55">{member.role}</p>
+
+          <p className="mx-auto mt-8 max-w-lg text-base leading-7 text-white/70 sm:text-lg">
+            {member.bio}
+          </p>
+
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            {member.socials.map((social) => (
+              <a
+                className="min-h-10 rounded-full border border-white/15 bg-white/[0.05] px-5 py-2.5 text-sm text-white/75 hover:border-white/30 hover:bg-white/10 hover:text-white"
+                href={social.url}
+                key={social.name}
+                rel="noreferrer"
+                target="_blank"
+              >
+                {social.name} ↗
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  )
 }
 
 

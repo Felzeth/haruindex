@@ -1,3 +1,4 @@
+import { Crown } from 'lucide-react'
 import countrysideImage from '../assets/images/japan-countryside.jpg'
 import { Footer } from '../components/Footer'
 import { members } from './data'
@@ -26,7 +27,17 @@ export function MembersPage() {
 
           <div className="mx-auto mt-10 grid max-w-4xl gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {members.map((member) => (
-              <a className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.06]" href={`/members/${member.slug}`} key={member.slug}>
+              <a
+                className="group relative rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.06]"
+                href={`/members/${member.slug}`}
+                key={member.slug}
+              >
+                {member.slug === 'felzeth' && (
+                  <span className="absolute -top-2 -right-2 flex items-center gap-1 rounded-full border border-violet-500/30 bg-violet-600/20 px-2.5 py-0.5 text-[10px] font-medium tracking-wide text-violet-300 backdrop-blur-md transition-all duration-300 group-hover:bg-violet-500/30 group-hover:text-violet-200">
+                    <Crown size={10} />
+                    PRO
+                  </span>
+                )}
                 <h2 className="text-base font-semibold text-white">{member.name}</h2>
                 <p className="mt-2 text-sm text-white/50">{member.role}</p>
               </a>
