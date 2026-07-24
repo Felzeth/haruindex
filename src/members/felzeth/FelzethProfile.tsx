@@ -150,7 +150,7 @@ function FelzethHome({ onNavigate }: { onNavigate: (p: Page) => void }) {
             </button>
             <a className="social" href="https://github.com/felzeth" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={16} /></a>
             <a className="social" href="https://x.com/felzeth" target="_blank" rel="noreferrer" aria-label="X / Twitter"><AtSign size={16} /></a>
-            <a className="social" href="mailto:felzeth@haru.team" aria-label="Email"><Mail size={16} /></a>
+            <a className="social" href="https://mail.google.com/mail/u/0/?fs=1&to=felzeth@haru.team" aria-label="Email"><Mail size={16} /></a>
           </div>
         </div>
       </footer>
