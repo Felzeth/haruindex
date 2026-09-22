@@ -1,13 +1,19 @@
 import countrysideImage from '../assets/images/japan-countryside.jpg'
 import { Footer } from '../components/Footer'
+import { NavLink } from '../components/Navbar'
 import type { Member } from './data'
 import FelzethProfile from './felzeth/FelzethProfile'
+import RekProfile from './rek/RekProfile'
 
 type Props = { member: Member }
 
 export function MemberProfilePage({ member }: Props) {
   if (member.slug === 'felzeth') {
     return <FelzethProfile />
+  }
+
+  if (member.slug === 'rek') {
+    return <RekProfile />
   }
 
   return (
@@ -28,9 +34,7 @@ export function MemberProfilePage({ member }: Props) {
           <a className="min-h-10 content-center text-sm font-semibold tracking-tight" href="/">
             haru<span className="text-white/45">.team</span>
           </a>
-          <a className="min-h-10 content-center text-sm text-white/65 hover:text-white" href="/members">
-            Members
-          </a>
+          <NavLink active href="/members">Members</NavLink>
         </nav>
       </header>
 

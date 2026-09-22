@@ -7,8 +7,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: 'CR-DL',
-    url: 'https://github.com/Felzeth/crdl',
-    description: 'Tools that make downloading media much more easier.',
+    url: 'https://github.com/Felzeth/crunchyroll-downloader',
+    description: 'A fork from Cutetenshii. That add more feature to it.',
   },
   {
     name: 'web index',

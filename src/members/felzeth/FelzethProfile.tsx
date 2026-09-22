@@ -4,6 +4,7 @@ import {
   Headphones, Terminal, Laptop, Type, Music, Flower2,
   Mail, AtSign, MapPin, NotebookPen, ArrowUp, ArrowLeft,
 } from "lucide-react";
+import { NavLink } from "../../components/Navbar";
 import "./felzeth.css";
 
 /* ---------------- haru nav ---------------- */
@@ -13,7 +14,7 @@ function HaruBackNav() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/10 bg-zinc-950/50 px-4 py-3 shadow-2xl shadow-black/10 backdrop-blur-xl sm:px-5">
         <a className="min-h-10 content-center text-sm font-semibold tracking-tight" href="/">haru<span className="text-white/45">.team</span></a>
 
-      <a className="min-h-10 content-center text-sm text-white/65 transition-colors duration-200 hover:text-white focus-visible:text-white" href="/members" aria-current="page">Members</a>
+      <NavLink active href="/members">Members</NavLink>
       </nav>
     </header>
   );

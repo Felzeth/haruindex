@@ -1,6 +1,7 @@
 import { Crown } from 'lucide-react'
 import countrysideImage from '../assets/images/japan-countryside.jpg'
 import { Footer } from '../components/Footer'
+import { NavLink } from '../components/Navbar'
 import { members } from './data'
 
 export function MembersPage() {
@@ -13,9 +14,7 @@ export function MembersPage() {
         <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/10 bg-zinc-950/50 px-4 py-3 shadow-2xl shadow-black/10 backdrop-blur-xl sm:px-5">
           <a className="min-h-10 content-center text-sm font-semibold tracking-tight" href="/">haru<span className="text-white/45">.team</span></a>
 
-          <a className="min-h-10 content-center text-sm text-white/65 transition-colors duration-200 hover:text-white focus-visible:text-white" href="/members" aria-current="page">
-            Members
-          </a>
+          <NavLink active href="/members">Members</NavLink>
         </nav>
       </header>
 
@@ -29,7 +28,7 @@ export function MembersPage() {
             {members.map((member) => (
               <a
                 className="group relative rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.06]"
-                href={`/members/${member.slug}`}
+                href={`/${member.slug}`}
                 key={member.slug}
               >
                 {member.slug === 'felzeth' && (
