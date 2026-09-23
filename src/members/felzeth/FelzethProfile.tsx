@@ -111,12 +111,12 @@ function FelzethHome({ onNavigate }: { onNavigate: (p: Page) => void }) {
         <Reveal delay={150} className="miwa-card-wrap">
           <div className="miwa-card glass">
             <p>
-              We're currently <Flower2 size={15} className="flower" aria-hidden="true" />{" "}
+              I'm currently <Flower2 size={15} className="flower" aria-hidden="true" />{" "}
               <span className="jobless-link">jobless</span>, and unwilling to find one.
             </p>
             <p className="miwa-meta">
               <span className="pulse" aria-hidden="true" />
-              We're <strong>High school</strong> students, who love breaking things.
+              I love do <strong>anything except my homework</strong>. And I love breaking things.
             </p>
           </div>
         </Reveal>
