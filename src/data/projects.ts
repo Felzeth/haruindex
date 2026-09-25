@@ -6,6 +6,11 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: 'Hydrax Tools',
+    url: 'https://github.com/Felzeth/hydrax-tools',
+    description: 'A collection of tools for working with Hydrax.',
+  },
+  {
     name: 'CR-DL',
     url: 'https://github.com/Felzeth/crunchyroll-downloader',
     description: 'A fork from Cutetenshii. That add more feature to it.',
