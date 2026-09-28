@@ -116,7 +116,7 @@ function FelzethHome({ onNavigate }: { onNavigate: (p: Page) => void }) {
             </p>
             <p className="miwa-meta">
               <span className="pulse" aria-hidden="true" />
-              I do <strong>anything except my own work</strong>. cause it suck.
+              I do <strong>anything except my own work.</strong> cause it suck.
             </p>
           </div>
         </Reveal>
