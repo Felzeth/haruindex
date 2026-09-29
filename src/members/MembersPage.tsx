@@ -31,7 +31,7 @@ export function MembersPage() {
                 href={`/${member.slug}`}
                 key={member.slug}
               >
-                {member.slug === 'felzeth' && (
+                {(member.slug === 'felzeth' || member.slug === 'rek') && (
                   <span className="absolute -top-2 -right-2 flex items-center gap-1 rounded-full border border-violet-500/30 bg-violet-600/20 px-2.5 py-0.5 text-[10px] font-medium tracking-wide text-violet-300 backdrop-blur-md transition-all duration-300 group-hover:bg-violet-500/30 group-hover:text-violet-200">
                     <Crown size={10} />
                     PRO

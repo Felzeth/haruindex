@@ -7,22 +7,25 @@ import "./rek.css";
 
 const IG_PROFILE_URL = "https://www.instagram.com/thndon_jj02/";
 
-/** His 3 latest posts, newest first (grid order from @thndon_jj02's public profile). Thumbnails hotlinked from Instagram's CDN — nothing downloaded. */
+/**
+ * Paste each uploaded artwork URL into `image`. Provider-hosted image URLs are
+ * displayed directly, so the gallery does not rely on Instagram embeds.
+ */
 const IG_POSTS = [
   {
     url: "https://www.instagram.com/p/DbpYBMnneY2/",
     caption: "latest piece",
-    image: "https://scontent.cdninstagram.com/v/t51.82787-15/762944111_17906155095463973_3432177598156920873_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=cgyJ3jo87LsQ7kNvwFtDcPO&_nc_oc=AdqMnxSLfEswu8IJwcDJ0OphJ5qiDX5pRyck1cy2FjuapTPY9I472W858-f6vMsX8_c&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=vp8QTWkcgVIlO4l2MckGAw&_nc_ss=7a689&oh=00_AQKwolndre0Z7_2eM4Fm0K0qHSCmILnp9dSpF_2I_Zrl5A&oe=6AB8804D",
+    image: "https://i.8upload.com/image/7ded6d39d1dbd5a9/762944111-17906155095463973-3432177598156920873-n.webp",
   },
   {
     url: "https://www.instagram.com/p/DbSnhxKnXOH/",
     caption: "recent work",
-    image: "https://scontent.cdninstagram.com/v/t51.82787-15/755807190_17904834006463973_8646189362114773368_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=l1Nq2m0-myIQ7kNvwFuZ7Xp&_nc_oc=Adp538obSeP6zRJA-KqPTbYRi20DOloHgiNLtr-55-zqRcyfWa0Nn3G-JnjurBtj2tA&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=vp8QTWkcgVIlO4l2MckGAw&_nc_ss=7a689&oh=00_AQL2XucKy01jFwCYfg4a4tPA7qCWa3E0I1ofcU3Jt2CkSg&oe=6AB889C5",
+    image: "https://i.8upload.com/image/cae399f47712b5f4/755807190-17904834006463973-8646189362114773368-n.webp",
   },
   {
     url: "https://www.instagram.com/p/DbODvHhHRSV/",
     caption: "recent work",
-    image: "https://scontent.cdninstagram.com/v/t51.82787-15/754126892_17904575541463973_56773931806110149_n.webp?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=p25jSs8qep4Q7kNvwGSNUdB&_nc_oc=AdqREO0YxNiqbWkmXWpVpNswTr2zN3u_W5MU33RmF2eBW3adBd7Lj7wRexhTJLJk5AA&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=ku0M-6Lr_Yn0P-Rahty08A&_nc_ss=7a689&oh=00_AQLfC6sIujNGzX0wUx2-kzigfkc6s8OnScxJAVrceTBEuw&oe=6AB870AA",
+    image: "https://i.8upload.com/image/3d5538c3aca5509a/754126892-17904575541463973-56773931806110149-n.webp",
   },
 ];
 
@@ -117,16 +120,26 @@ export default function RekProfile() {
           <div className="ig-grid">
             {IG_POSTS.map((post, i) => (
               <Reveal key={post.url} delay={(i % 3) * 70}>
-                <a
-                  className="ig-card glass"
-                  href={post.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`${post.caption} — view on Instagram`}
-                >
-                  <img className="ig-thumb" src={post.image} alt={post.caption} loading="lazy" />
-                  <span className="ig-caption">{post.caption}</span>
-                </a>
+                <article className="ig-card glass">
+                  {post.image ? (
+                    <a
+                      className="ig-image-link"
+                      href={post.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${post.caption} — view on Instagram`}
+                    >
+                      <img className="ig-thumb" src={post.image} alt={post.caption} loading="lazy" />
+                    </a>
+                  ) : (
+                    <div className="ig-empty" aria-label="Artwork URL has not been added yet">
+                      Add artwork URL
+                    </div>
+                  )}
+                  <a className="ig-caption" href={post.url} target="_blank" rel="noreferrer">
+                    {post.caption} <ArrowUpRight size={13} aria-hidden="true" />
+                  </a>
+                </article>
               </Reveal>
             ))}
           </div>

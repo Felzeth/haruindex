@@ -22,6 +22,13 @@ export const members: Member[] = [
     ],
   },
   {
+    slug: 'rek',
+    name: 'Rek',
+    role: 'Member',
+    bio: 'Most helpful member in the team',
+    socials: [{ name: 'Instagram', url: 'https://www.instagram.com/thndon_jj02/' }],
+  },
+  {
     slug: 'axon',
     name: 'Axon',
     role: 'Member',
@@ -43,10 +50,10 @@ export const members: Member[] = [
     socials: [],
   },
   {
-    slug: 'rek',
-    name: 'Rek',
+    slug: 'Kelvorn',
+    name: 'Kelvorn',
     role: 'Member',
-    bio: 'Most helpful member in the team',
-    socials: [{ name: 'Instagram', url: 'https://www.instagram.com/thndon_jj02/' }],
-  },
+    bio: 'No Bio yet.',
+    socials: [{ name: 'Web', url: 'https://kelvornyx.github.io/kelvornyx/' }],
+  }
 ]
