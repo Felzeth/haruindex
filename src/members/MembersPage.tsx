@@ -22,7 +22,7 @@ export function MembersPage() {
         <div className="w-full max-w-5xl text-center">
           <p className="text-sm font-medium tracking-[0.2em] text-white/55 uppercase">Haru Team</p>
           <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white sm:text-6xl md:text-7xl">Members</h1>
-          <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-white/65 sm:text-lg">The people behind Haru Team.</p>
+          <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-white/65 sm:text-lg">Our Slav— I mean, our team.</p>
 
           <div className="mx-auto mt-10 grid max-w-4xl gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {members.map((member) => (
