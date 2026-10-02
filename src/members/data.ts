@@ -24,7 +24,7 @@ export const members: Member[] = [
   {
     slug: 'rek',
     name: 'Rek',
-    role: 'Member',
+    role: 'Co-Founder',
     bio: 'Most helpful member in the team',
     socials: [{ name: 'Instagram', url: 'https://www.instagram.com/thndon_jj02/' }],
   },
