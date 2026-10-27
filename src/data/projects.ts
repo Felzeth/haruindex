@@ -27,7 +27,7 @@ export const projects: Project[] = [
   },
   {
     name: 'animexstream',
-    url: 'team.kura-project.com/projects/animexstream',
+    url: 'https://team.kura-project.com/projects/animexstream',
     description: 'A simple anime streaming website.',
   }
 ]
