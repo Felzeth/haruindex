@@ -25,4 +25,9 @@ export const projects: Project[] = [
     url: 'https://github.com/Felzeth/anihook',
     description: 'Tools that auto announce new anime releases.',
   },
+  {
+    name: 'animexstream',
+    url: 'team.kura-project.com/projects/animexstream',
+    description: 'A simple anime streaming website.',
+  }
 ]
